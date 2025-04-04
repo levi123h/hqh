@@ -328,10 +328,10 @@ const Clients = () => {
                 {client.video ? (
                   <div className="relative">
                     {/* iMac Frame */}
-                    <div className="relative mx-auto w-full max-w-[90%] md:max-w-[800px]">
+                    <div className="relative mx-auto w-full max-w-[800px]">
                       {/* iMac Screen */}
                       <div className="bg-white rounded-2xl p-2 border-4 border-gray-200">
-                        <div className="relative aspect-[16/9] md:aspect-[16/9] rounded-lg overflow-hidden">
+                        <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
                           <video
                             src={client.video}
                             className="w-full h-full object-cover pointer-events-none"
@@ -477,48 +477,6 @@ const Clients = () => {
                         </div>
                       ))}
                     </div>
-                  </div>
-                )}
-
-                {/* Kin Hotel Grid */}
-                {client.images && client.images.length > 0 && (
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-h-[250px] md:max-h-none overflow-hidden mt-8">
-                    {client.images.map((image, index) => (
-                      <motion.div
-                        key={index}
-                        className="relative aspect-square rounded-lg overflow-hidden"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <Image
-                          src={image}
-                          alt={`${client.name} Project Image ${index + 1}`}
-                          fill
-                          className="object-cover"
-                        />
-                      </motion.div>
-                    ))}
-                  </div>
-                )}
-
-                {/* Mai Phu Hung Grid */}
-                {client.thirdRowImages && client.thirdRowImages.length > 0 && (
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 mt-4 md:mt-8">
-                    {client.thirdRowImages.map((image, index) => (
-                      <motion.div
-                        key={index}
-                        className="relative aspect-square rounded-lg overflow-hidden"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <Image
-                          src={image}
-                          alt={`Project Image ${index + 1}`}
-                          fill
-                          className="object-cover"
-                        />
-                      </motion.div>
-                    ))}
                   </div>
                 )}
               </div>

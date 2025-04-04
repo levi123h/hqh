@@ -111,18 +111,19 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-xl md:text-2xl mb-12 md:mb-20"
+          className="text-center mb-16"
         >
-          &#123; MY SKILL SET &#125;
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900">My Skill Set</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Equipped with a diverse range of tools and expertise to drive marketing excellence and business growth</p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-4 md:mx-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category) => (
             <motion.div
               key={category.id}

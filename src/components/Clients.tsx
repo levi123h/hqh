@@ -311,66 +311,6 @@ const Clients = () => {
             >
               {/* Images/Video/3D/Puzzle/Gallery Section */}
               <div className="w-full lg:w-1/2">
-                <div className="relative">
-                  {/* First Row - Moving Left */}
-                  <div className="absolute top-0 left-0 w-full animate-scroll-left">
-                    <div className="flex gap-4">
-                      {client.images && [...client.images, ...client.images].map((image, i) => (
-                        <div key={i} className="flex-shrink-0 w-[200px] md:w-[300px]">
-                          <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                            <Image
-                              src={image}
-                              alt={`${client.name} - Image ${i + 1}`}
-                              fill
-                              className="object-cover"
-                              unoptimized
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Second Row - Moving Right */}
-                  <div className="absolute top-[140px] md:top-[200px] left-0 w-full animate-scroll-right">
-                    <div className="flex gap-4">
-                      {client.images && [...client.images, ...client.images].reverse().map((image, i) => (
-                        <div key={i} className="flex-shrink-0 w-[200px] md:w-[300px]">
-                          <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                            <Image
-                              src={image}
-                              alt={`${client.name} - Image ${i + 1}`}
-                              fill
-                              className="object-cover"
-                              unoptimized
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Third Row - Moving Left */}
-                  {client.thirdRowImages && client.thirdRowImages.length > 0 && (
-                    <div className="absolute bottom-0 left-0 w-full animate-scroll-left">
-                      <div className="flex gap-4">
-                        {[...client.thirdRowImages, ...client.thirdRowImages].map((image, i) => (
-                          <div key={i} className="flex-shrink-0 w-[200px] md:w-[300px]">
-                            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                              <Image
-                                src={image}
-                                alt={`${client.name} - Image ${i + 1}`}
-                                fill
-                                className="object-cover"
-                                unoptimized
-                              />
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
                 {client.video ? (
                   <div className="relative">
                     {/* iMac Frame */}
@@ -394,6 +334,67 @@ const Clients = () => {
                         </div>
                       </div>
                     </div>
+                  </div>
+                ) : client.images && client.images.length > 0 ? (
+                  <div className="relative h-[600px] overflow-hidden rounded-2xl shadow-2xl">
+                    {/* First Row - Moving Left */}
+                    <div className="absolute top-0 left-0 w-full animate-scroll-left">
+                      <div className="flex gap-4">
+                        {[...client.images, ...client.images].map((image, i) => (
+                          <div key={i} className="flex-shrink-0 w-[300px]">
+                            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                              <Image
+                                src={image}
+                                alt={`${client.name} - Image ${i + 1}`}
+                                fill
+                                className="object-cover"
+                                unoptimized
+                              />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Second Row - Moving Right */}
+                    <div className="absolute top-[200px] left-0 w-full animate-scroll-right">
+                      <div className="flex gap-4">
+                        {[...client.images, ...client.images].reverse().map((image, i) => (
+                          <div key={i} className="flex-shrink-0 w-[300px]">
+                            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                              <Image
+                                src={image}
+                                alt={`${client.name} - Image ${i + 1}`}
+                                fill
+                                className="object-cover"
+                                unoptimized
+                              />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Third Row - Moving Left */}
+                    {client.thirdRowImages && client.thirdRowImages.length > 0 && (
+                      <div className="absolute bottom-0 left-0 w-full animate-scroll-left">
+                        <div className="flex gap-4">
+                          {[...client.thirdRowImages, ...client.thirdRowImages].map((image, i) => (
+                            <div key={i} className="flex-shrink-0 w-[300px]">
+                              <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                                <Image
+                                  src={image}
+                                  alt={`${client.name} - Image ${i + 1}`}
+                                  fill
+                                  className="object-cover"
+                                  unoptimized
+                                />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 ) : client.puzzleImages ? (
                   <PuzzleAnimation images={client.puzzleImages} />

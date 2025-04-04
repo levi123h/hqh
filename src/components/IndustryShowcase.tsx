@@ -65,7 +65,7 @@ const IndustryShowcase = () => {
             transition={{ duration: 0.3 }}
             className="text-center"
           >
-            <h2 className="text-[70px] font-bold text-white">
+            <h2 className="text-[40px] md:text-[70px] font-bold text-white">
               {industries[currentIndex]}
             </h2>
           </motion.div>

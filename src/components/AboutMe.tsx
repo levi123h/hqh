@@ -17,7 +17,7 @@ const AboutMe = () => {
           transition={{ duration: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-2 items-center"
         >
-          <div className="order-2 md:order-1 max-w-full pr-0 md:pr-4 mb-8 md:mb-0">
+          <div className="order-2 md:order-1 max-w-full pr-0 md:pr-4 mt-16 md:mt-0 mb-8 md:mb-0">
             <h2 className="text-3xl md:text-4xl font-medium mb-8">About me</h2>
             <div className="space-y-6">
               <p className="text-lg md:text-[50px] leading-[1.1] md:leading-[1.15] font-semibold max-w-full line-clamp-6 h-auto md:h-[330px] flex items-center">

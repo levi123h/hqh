@@ -328,7 +328,7 @@ const Clients = () => {
                 {client.video ? (
                   <div className="relative">
                     {/* iMac Frame */}
-                    <div className="relative mx-auto w-full max-w-[800px]">
+                    <div className="relative mx-auto w-full max-w-[90%] md:max-w-[800px]">
                       {/* iMac Screen */}
                       <div className="bg-white rounded-2xl p-2 border-4 border-gray-200">
                         <div className="relative aspect-[16/9] rounded-lg overflow-hidden">

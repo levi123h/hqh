@@ -132,7 +132,7 @@ const Skills = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: Number(category.id.replace('0', '')) * 0.05 }}
               whileHover={{ y: -5, boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.1)' }}
-              className="bg-white rounded-xl shadow-md p-5 hover:shadow-lg transition-all duration-300 border border-gray-100"
+              className="mx-4 md:mx-0 bg-white rounded-xl shadow-md p-5 hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
               <div className="flex items-center mb-2">
                 <span className="text-2xl font-bold text-gray-200 mr-3">{category.id}</span>

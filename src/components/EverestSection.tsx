@@ -39,10 +39,10 @@ const EverestSection = () => {
           {/* Text on the right */}
           <div className="order-2 md:order-2 max-w-full pl-0 md:pl-1">
             <h2 className="text-3xl md:text-4xl font-medium text-white leading-tight">Little Fact About Myself</h2>
-            <p className="text-lg md:text-[50px] leading-[1.1] md:leading-[1.15] font-semibold max-w-full line-clamp-6 h-auto md:h-[330px] flex items-center text-white -mt-4">
+            <p className="text-lg md:text-[50px] leading-[1.1] md:leading-[1.15] font-semibold max-w-full line-clamp-6 h-auto md:h-[330px] flex items-center text-white mb-8 md:mb-0">
               I have set foot on Everest Base Camp at 5,364m.
             </p>
-            <p className="text-base md:text-xl text-gray-300 leading-relaxed -mt-8">
+            <p className="text-base md:text-xl text-gray-300 leading-relaxed">
               The journey was nothing short of grueling—battling extreme weather that dropped to -15°C, trekking through treacherous terrain of rugged rocks and icy paths, and pushing through the thin air above 5,000m, where every step felt heavier than the last.
             </p>
             <p className="text-base md:text-xl text-gray-300 leading-relaxed mt-4">

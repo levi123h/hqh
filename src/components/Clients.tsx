@@ -236,9 +236,9 @@ const PuzzleAnimation = ({ images }: { images: string[] }) => {
 
 const MaiPhuHungGallery = ({ images }: { images: string[] }) => {
   return (
-    <div className="relative w-full max-w-[800px] mx-auto space-y-8">
-      {/* First Gallery - 4 Images */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="relative w-full max-w-[800px] mx-auto space-y-4 md:space-y-8">
+      {/* First Gallery - 4 Images in 2x2 grid on mobile */}
+      <div className="grid grid-cols-2 gap-2 md:gap-4">
         {images.slice(0, 4).map((image, index) => (
           <motion.div
             key={index}
@@ -256,29 +256,19 @@ const MaiPhuHungGallery = ({ images }: { images: string[] }) => {
                 unoptimized
               />
             </div>
-            
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileHover={{ opacity: 1, y: 0 }}
-                className="text-white text-center p-4"
-              >
-                <p className="text-sm font-medium">View Project</p>
-              </motion.div>
-            </div>
           </motion.div>
         ))}
       </div>
 
-      {/* Second Gallery - 2 Images Stacked */}
-      <div className="flex flex-col gap-1">
+      {/* Second Gallery - Remaining Images */}
+      <div className="grid grid-cols-2 md:grid-cols-1 gap-2 md:gap-4">
         {images.slice(4).map((image, index) => (
           <motion.div
             key={index + 4}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: (index + 4) * 0.1 }}
-            className="relative w-full h-[80px]"
+            className="relative w-full h-[80px] md:h-[120px]"
           >
             <Image
               src={image}
@@ -290,10 +280,6 @@ const MaiPhuHungGallery = ({ images }: { images: string[] }) => {
           </motion.div>
         ))}
       </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute -top-4 -left-4 w-24 h-24 bg-blue-100 rounded-full opacity-20 -z-10"></div>
-      <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-blue-200 rounded-full opacity-20 -z-10"></div>
     </div>
   );
 };

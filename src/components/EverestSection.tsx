@@ -38,7 +38,7 @@ const EverestSection = () => {
 
           {/* Text on the right */}
           <div className="order-2 md:order-2 max-w-full pl-0 md:pl-1">
-            <h2 className="text-3xl md:text-4xl font-medium text-white leading-tight">Little Fact About Myself</h2>
+            <h2 className="text-3xl md:text-4xl font-medium text-white leading-tight mb-6 md:mb-0">Little Fact About Myself</h2>
             <p className="text-lg md:text-[50px] leading-[1.1] md:leading-[1.15] font-semibold max-w-full line-clamp-6 h-auto md:h-[330px] flex items-center text-white mb-8 md:mb-0">
               I have set foot on Everest Base Camp at 5,364m.
             </p>

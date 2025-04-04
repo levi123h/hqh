@@ -20,6 +20,21 @@ const nextConfig = {
     });
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: 'hoquochung.cloud',
+          },
+        ],
+        destination: 'https://www.hoquochung.cloud',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 module.exports = nextConfig; 

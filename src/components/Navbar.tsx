@@ -27,14 +27,11 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { name: '01 Projects', href: '#projects' },
-    { name: '02 About', href: '#about' },
-    { name: '03 Contact', href: '#contact' },
-  ];
-
-  const socialLinks = [
-    { name: 'Twitter', href: 'https://twitter.com' },
-    { name: 'LinkedIn', href: 'https://linkedin.com' },
+    { name: 'About Me', href: '#about-me' },
+    { name: 'Skill Set', href: '#skills' },
+    { name: 'Projects', href: '#clients' },
+    { name: 'Fact', href: '#fact' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -50,7 +47,7 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
           <Link href="/" className="font-bold text-xl">
-            HQH Design
+            Hồ Quốc Hưng
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -63,20 +60,6 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-
-            <div className="ml-8 flex items-center space-x-4">
-              {socialLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-70 transition-opacity uppercase text-sm"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
           </div>
 
           <button
@@ -107,20 +90,6 @@ const Navbar = () => {
               {item.name}
             </Link>
           ))}
-
-          <div className="flex items-center space-x-6 mt-8">
-            {socialLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="uppercase"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
         </motion.div>
       )}
     </>

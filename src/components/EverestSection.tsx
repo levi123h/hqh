@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const EverestSection = () => {
   return (
-    <section className="py-8 md:py-12 px-8 md:px-12 bg-black">
+    <section id="fact" className="py-8 md:py-12 px-8 md:px-12 bg-black">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

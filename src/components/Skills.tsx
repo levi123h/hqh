@@ -110,7 +110,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="skills" className="py-20 bg-gray-50">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -146,7 +146,7 @@ const Skills = () => {
                   category.logos.map((logo, index) => (
                     <motion.div 
                       key={index} 
-                      className="relative w-[150px] h-[120px]"
+                      className="relative w-[45%] md:w-[150px] h-[120px]"
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.2 }}
                     >

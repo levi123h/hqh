@@ -300,7 +300,7 @@ const MaiPhuHungGallery = ({ images }: { images: string[] }) => {
 
 const Clients = () => {
   return (
-    <section className="py-20 bg-white">
+    <section id="clients" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -339,6 +339,11 @@ const Clients = () => {
                             loop
                             muted
                             playsInline
+                            disablePictureInPicture
+                            disableRemotePlayback
+                            onError={(e) => {
+                              console.error("Video playback error:", e);
+                            }}
                           />
                         </div>
                       </div>

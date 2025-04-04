@@ -43,9 +43,15 @@ const IndustryShowcase = () => {
         loop
         muted
         playsInline
+        disablePictureInPicture
+        disableRemotePlayback
         className="absolute inset-0 w-full h-full object-cover"
+        onError={(e) => {
+          console.error("Video playback error:", e);
+        }}
       >
         <source src="/videos/video 2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
 
       {/* Text Overlay */}

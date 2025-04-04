@@ -16,7 +16,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col justify-center relative px-6 md:px-12 overflow-hidden">
+    <section className="min-h-[350px] md:min-h-screen flex flex-col justify-center relative px-6 md:px-12 overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full z-0">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
@@ -27,6 +27,11 @@ const HeroSection = () => {
           muted
           loop
           playsInline
+          disablePictureInPicture
+          disableRemotePlayback
+          onError={(e) => {
+            console.error("Video playback error:", e);
+          }}
         >
           <source src="/videos/video 5.mp4" type="video/mp4" />
           Your browser does not support the video tag.
